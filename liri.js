@@ -8,7 +8,7 @@ var spotify = new Spotify(keys.spotify);
 
 
 var command = process.argv[2];
-var keyword = process.argv[3];
+var keyword = process.argv.slice(3).join(" ");
 
 function spotifyThis (keyword) {
     if (keyword === "undefined") {
@@ -72,6 +72,33 @@ function getOMDb(movie) {
     );
 }
 
+    function getRandom() {
+        fs.readFile("random.txt", "utf8", function(err, data){
+            if (err){
+                return console.log(err);
+            }
+
+            var arg = data.split(",");
+            var commandFor = arg[0];
+            var input = arg[1];
+
+            switch(commandFor){
+                case "movie-this":
+                    getOMDb(input);
+                    break;
+
+                case "spotify-this-song":
+                    spotifyThis(input);
+                    break;
+
+                case "concert-this":
+                    showConcert(input);
+                    break;
+            }
+        });
+    };
+
+
 switch(command){
     case "spotify-this-song":
         spotifyThis(keyword)
@@ -84,6 +111,13 @@ switch(command){
     case "movie-this":
         getOMDb(keyword);
         break;
+
+    case "do-what-it-says":
+        getRandom(keyword);
+        break
+
+    default:
+        console.log("!--------NOT - RECOGNIZED--------");
 }
 
 
