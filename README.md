@@ -55,7 +55,7 @@ SPOTIFY_SECRET=your-spotify-secret
 node liri.js movie-this <enter movie name here>
 ```
 Expected output:
-![movie-this](C:/Users/tulus/ucd-bootcamp/liri-node-app/Images/movieThis.jpg)
+![movie-this](assets\Images\movieThis.jpg)
 
 ---
 
@@ -65,7 +65,7 @@ Expected output:
 node liri.js spotify-this-song <enter song name here>
 ```
 Expected output:
-![spotify-this](C:/Users/tulus/ucd-bootcamp/liri-node-app/Images/Untitled.jpg)
+![spotify-this](assets\Images\Untitled.jpg)
 
 ---
 
@@ -74,7 +74,7 @@ Expected output:
 node liri.js concert-this <enter artist name here>
 ```
 Expected output:
-![concert-this](C:/Users/tulus/ucd-bootcamp/liri-node-app/Images/concertThis.jpg)
+![concert-this](assets\Images\concertThis.jpg)
 
 ---
 
@@ -84,7 +84,7 @@ Expected output:
 node liri.js do-what-it-says 
 ```
 Expected output:
-![do-what-its-says](C:/Users/tulus/ucd-bootcamp/liri-node-app/Images/dowhat.jpg)
+![do-what-its-says](assets\Images\dowhat.jpg)
 
 ---
 
